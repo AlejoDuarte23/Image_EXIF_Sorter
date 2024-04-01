@@ -104,24 +104,26 @@ def save_image_info_to_json(image_info: dict, json_file_path: str) -> None:
 
 
 
-# %% Runn the hole thing !
-# where the folder will be created 
-base_folder =  r"E:\example_maria"
-# root folder for the images 
-# image_folder= r"C:\Users\aleja\Documents\drive-download-20240215T231704Z-001"
-image_folder= r"E:\alex_pictures_examples" 
 
-image_info = main(image_folder=image_folder)
-move_images_to_folders(image_info, base_folder)
+if __name__ == '__main__':
+    # %% Runn the hole thing !
+    # where the folder will be created 
+    base_folder =  r"E:\example_maria"
+    # root folder for the images 
+    # image_folder= r"C:\Users\aleja\Documents\drive-download-20240215T231704Z-001"
+    image_folder= r"E:\alex_pictures_examples" 
 
-json_file_path = r"C:\Users\aleja\Documents\image_info2.json"
+    image_info = main(image_folder=image_folder)
+    #move_images_to_folders(image_info, base_folder)
 
-
-#  save json file 
-save_image_info_to_json(image_info, json_file_path)
+    json_file_path = r"C:\Users\aleja\Documents\image_info2.json"
 
 
-# %%
+    #  save json file 
+    #save_image_info_to_json(image_info, json_file_path)
+
+
+    # %%
 
 
 
