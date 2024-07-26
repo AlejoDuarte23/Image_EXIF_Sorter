@@ -10,6 +10,7 @@ This project processes images that have EXIF metadata, sorts them into folders, 
 
 2. **Place the STR11 folder**:
    - Place the extracted STR11 folder in the same directory as this repository.
+   - If the extracted data is not in the same foler type the complete path in the functions.
 
 3. **Create a new file called `example.py`**:
    - Create a new file named `example.py` in the same directory as this repository.
@@ -37,12 +38,12 @@ This project processes images that have EXIF metadata, sorts them into folders, 
 
    3. **Move images to folders based on the initial sort**:
       ```python
-      move_images_to_folders(info_dict, 'First_Sort')
+      move_images_to_folders(image_info = info_dict, base_folder = 'First_Sort')
       ```
 
    4. **Sort images by defect type**:
       ```python
-      sort_by_defect('First_Sort', 'STR11_sorted_defects')
+      sort_by_defect(source = 'First_Sort', destination = 'STR11_sorted_defects')
       ```
 
    5. **Manually copy the corrosion folder from `STR11_sorted_defects` to `Corrosion`**:
@@ -50,7 +51,7 @@ This project processes images that have EXIF metadata, sorts them into folders, 
 
    6. **Create an information dictionary for the corrosion images**:
       ```python
-      sorted_dict_corrosion = create_info_dict(r"Corrosion")
+      sorted_dict_corrosion = create_info_dict(base_path = r"Corrosion")
       ```
 
    7. **Save the corrosion information to a JSON file**:
@@ -60,7 +61,7 @@ This project processes images that have EXIF metadata, sorts them into folders, 
 
    8. **Export the corrosion information to an Excel file**:
       ```python
-      dict_to_excel(sorted_dict_corrosion, 'Corrosion.xlsx')
+      dict_to_excel(deteriorated_data = sorted_dict_corrosion, excel_path = 'Corrosion.xlsx')
       ```
 
 
