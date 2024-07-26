@@ -1,6 +1,6 @@
-# STR11 Image Processing Project
+# Image Sorter
 
-This project processes images from the STR11 dataset, sorts them by defects, and exports the information to JSON and Excel formats.
+This project processes images that have EXIF metadata, sorts them into folders, and exports the information to JSON and Excel formats.
 
 ## Instructions
 
